@@ -20,3 +20,10 @@ $fetch = $db->fetch_all($result);
 print_r($fetch);
 ```
 
+## INSERT
+```php
+$sql = "INSERT INTO users (user,email) VALUES (?,?)";
+$params = ["jay","jay@email.com"]; //$params is array
+$db->query($sql,$params);
+```
+
