@@ -1,14 +1,10 @@
 <?php
 
-class Database
+class PHPMySQLi
 {
     private $db;
-    function __construct()
+    function __construct(string $hostname, string $username, string $password, string $database)
     {
-        $hostname = "";
-        $database = "";
-        $username = "";
-        $password = "";
         $this->db = new mysqli($hostname, $username, $password, $database);
 
         if ($this->db->connect_errno) {
